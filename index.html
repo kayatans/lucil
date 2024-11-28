@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Los polos Hermosa</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fef6e4;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header with Food Background Image */
+        header {
+            background: url('https://via.placeholder.com/1920x600/FF6347/FFFFFF?text=Delicious+Food') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 3.8em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.4em;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            font-style: italic;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ff5722;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            background-color: #ff7043;
+        }
+
+        nav a.active {
+            background-color: #ff9800;
+        }
+
+        /* Container for Content */
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About Us Section */
+        #about {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5em;
+            color: #FF5722;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        #about p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* Services Section */
+        #services {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #services h2 {
+            font-size: 2.5em;
+            color: #FF5722;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .service-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .service-item h3 {
+            font-size: 1.8em;
+            color: #FF5722;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5em;
+            color: #FF5722;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #contact input, #contact textarea {
+            padding: 12px;
+            margin: 10px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        #contact button {
+            padding: 12px 30px;
+            background-color: #FF5722;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact button:hover {
+            background-color: #ff7043;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #FF5722;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Los pollos Hermosa</h1>
+        <p>Indulge in the Best of the Best Fast Food</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Thank you for joining me today at Los Pollos Hermosa. Here, we believe in more than just great food. We believe in the power of excellence and consistency. Every piece of chicken that leaves our kitchen is a testament to our commitment to quality. From the seasoning to the cooking method, we ensure that every meal is perfect—because you deserve nothing less.</p>
+        </section>
+
+        <!-- Our Menu Section -->
+        <section id="services">
+            <h2>Our Menu</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <img src="image.jpeg.jpg">
+                    <h3>Juicy Burgers</h3>
+                    <p>Indulge in our premium burgers made with the freshest ingredients and a touch of gourmet flavors.</p>
+                </div>
+                <div class="service-item">
+                    <img src="image.jpeg 2.jpeg">
+                    <h3>Crispy Fried Chicken</h3>
+                    <p>Our crispy fried chicken is golden, crunchy, and packed with flavor, making it the perfect comfort food.</p>
+                </div>
+                <div class="service-item">
+                    <img src="image.jpeg 3.jpg">
+                    <h3>Delicious Pizza</h3>
+                    <p>From classic Margherita to our special spicy chicken pizza, we offer a variety of pizzas to satisfy your cravings.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>If you want to know more, Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Activity for Websystem and technology 1# CSS</p>
+    </footer>
+</body>
+</html>
